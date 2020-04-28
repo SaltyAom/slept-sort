@@ -45,6 +45,7 @@ let someAsyncFunction = async() => {
 ```
 
 The reason why you might interested in Slept Sort is because it
+
 ![Contains cat GIF](https://camo.githubusercontent.com/276f412823469d4fbbdad5bf42c43d1747dbf327/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f66656174757265642f66656174757265642d636f6e7461696e732d6361742d676966732e737667)
 
 ![Vanilla GIF](https://steamuserimages-a.akamaihd.net/ugc/105106517891993907/A52B4F0853EDACCE1BFE6F71B6E60598523E1585/)
