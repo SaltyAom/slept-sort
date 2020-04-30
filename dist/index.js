@@ -1,1 +1,1 @@
-!function(e){"use strict";Object.defineProperty(e,"__esModule",{value:!0});e.default=e=>new Promise(t=>{let o=[];e.forEach(l=>{setTimeout(()=>{o.push(l),o.length===e.length&&t(o)},l)})})}("undefined"==typeof sleptSort?sleptSort={}:sleptSort);
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=e=>new Promise(t=>{let s=[];e.map(l=>setTimeout(o=>{s.push(l),s.length===e.length&&t(s)},l))});

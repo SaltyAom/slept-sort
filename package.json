@@ -1,9 +1,9 @@
 {
     "name": "slept-sort",
     "description": "Asynchronously sleep sort",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "main": "index.js",
-    "typings": "dist/index.d.ts",
+    "typings": "index.d.ts",
     "keywords": [
         "sleep sort",
         "sleep-sort.js",
@@ -15,14 +15,17 @@
     "license": "MIT",
     "scripts": {
         "prebuild": "rm -rf dist",
-        "build": "yarn build:js && yarn build:cjs && yarn build:compress && yarn build:es6 && yarn build:esm && yarn build:umd && yarn build:size",
+        "build": "yarn build:js && yarn build:cjs && yarn build:es6 && yarn build:esm && yarn build:umd && yarn compress",
         "build:js": "tsc",
         "build:cjs": "tsc --project tsconfig-cjs.json",
         "build:es6": "tsc --project tsconfig-es6.json",
         "build:esm": "tsc --project tsconfig-esm.json",
         "build:umd": "tsc --project tsconfig-umd.json",
-        "build:compress": "terser dist/index.js -o dist/index.js --compress --mangle --wrap sleptSort",
-        "build:size": "cd dist && ls -lh",
+        "compress": "yarn compress:cjs && yarn compress:es6 && yarn compress:esm && yarn compress:umd",
+        "compress:cjs": "terser dist/index.js -o dist/index.js --compress --mangle",
+        "compress:es6": "terser dist/es6/index.js -o dist/es6/index.js --compress --mangle",
+        "compress:esm": "terser dist/esm/index.js -o dist/esm/index.js --compress --mangle",
+        "compress:umd": "terser dist/umd/index.js -o dist/umd/index.js --compress --mangle",
         "release": "yarn test && yarn build && yarn publish --non-interactive",
         "test": "jest",
         "test:clear": "jest --clearCache"

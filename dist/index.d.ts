@@ -1,2 +1,2 @@
-declare const sleptSort: (array: number[]) => Promise<unknown>;
-export default sleptSort;
+declare const _default: (array: number[]) => Promise<unknown>;
+export default _default;

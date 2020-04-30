@@ -3,17 +3,15 @@
  * @param { number[] } array Array of number to be sorted.
  * @returns { Promise } Sorted array.
  */
-const sleptSort = (array: number[]) => new Promise(resolve => {
+export default (array: number[]) => new Promise(resolve => {
     let _sorted: number[] = []
 
-    array.forEach(number => {
-        setTimeout(() => {
+    array.map(number =>
+        setTimeout((_: undefined) => {
             _sorted.push(number)
 
             if(_sorted.length === array.length)
                 resolve(_sorted)
         }, number)
-    })
+    )
 })
-
-export default sleptSort

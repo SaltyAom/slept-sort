@@ -6,4 +6,10 @@ describe("Slept Sort", () => {
 
         expect(sorted).toEqual([1,2,3])
     })
+
+    it("should sort same value", async () => {
+        let sorted = await sleptSort([2,2,1,3])
+
+        expect(sorted).toEqual([1,2,2,3])
+    })
 })
